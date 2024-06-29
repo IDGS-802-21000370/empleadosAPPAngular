@@ -1,0 +1,57 @@
+<div class="accordion" id="accordionExample">
+    <div style="margin: 15px;">
+      <button style="background-color: white; border: 2px solid #00806f;" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <h3 style="color: black">Registro</h3>
+      </button>
+    </div>
+    <div id="collapseOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="col">
+          <form (submit)="agregarEmpleado()">
+            <div class="row">
+              <div class="col-6">
+                <input
+                type="text"
+                placeholder="Nombre"  
+                name="nombre"
+                [(ngModel)]="nuevo.nombre"
+                />
+              </div>
+              <div class="col-6">
+                <input
+                  type="mail"
+                  placeholder="Correo"
+                  name="correo"
+                  [(ngModel)]="nuevo.correo"
+                  />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <input
+                type="number"
+                placeholder="Telefono"
+                name="telefono"
+                [(ngModel)]="nuevo.telefono"
+                />
+              </div>
+              <div class="col-6">
+                <input
+                type="date"
+                placeholder="fechaNacimiento"
+                name="fechaNacimiento"
+                [(ngModel)]="nuevo.fechaNacimiento"
+                />
+              </div>
+            </div>
+            <select name="sexo" [(ngModel)]="nuevo.sexo">
+              <option value="Otro">Otro</option>
+              <option value="Hombre" selected>Hombre</option>
+              <option value="Mujer">Mujer</option>
+            </select>
+            <button type="submit">Agregar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
